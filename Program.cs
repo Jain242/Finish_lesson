@@ -1,5 +1,6 @@
-﻿
+﻿// -- FUNCTION --
 
+// Функция вывода массива
  void PrintArray(string [] array){
  System.Console.Write("[");
 int n = array.Length;
@@ -11,17 +12,15 @@ if (n == 0) System.Console.WriteLine("]");
  }
 }
 
-
+// Функция ввода массива
 void EnterArray(string [] array, int n){
    
 for (int i = 0; i < n; i++)
 {array [i] = Convert.ToString(Console.ReadLine());
 }
 }
-
+// Функция, которая создаёт новый массив 
 string [] CheckArray(string [] array){
-
-//
 int j = 0;
 for (int i = 0; i < array.Length; i++)
 {if (array[i].Length < 4) 
@@ -38,6 +37,7 @@ return newarray;
 }
 
 
+// -- MAIN --
 
 System.Console.WriteLine("Итоговая проверочная работа");
 System.Console.Write("Введите колличество элементов массива: ");
