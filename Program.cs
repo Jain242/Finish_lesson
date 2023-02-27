@@ -1,6 +1,6 @@
 ﻿
 
- void PrintArray(int [] array){
+ void PrintArray(string [] array){
  System.Console.Write("[");
 int n = array.Length;
 if (n == 0) System.Console.WriteLine("]");
@@ -12,12 +12,10 @@ if (n == 0) System.Console.WriteLine("]");
 }
 
 
-void EnterArray(int [] array, int n){
+void EnterArray(string [] array, int n){
    
 for (int i = 0; i < n; i++)
-{
-     array[i] = new Random().Next(100,1000);
-
+{array [i] = Convert.ToString(Console.ReadLine());
 }
 }
 
@@ -27,3 +25,7 @@ System.Console.Write("Введите колличество элементов �
 int a = Convert.ToInt32(Console.ReadLine());
 if (a < 0){System.Console.WriteLine("Ввели отрицательное число!!!");
 return;}
+string [] array = new string [a];
+System.Console.WriteLine("Эллементы массива через Enter");
+EnterArray(array,a);
+PrintArray(array);
